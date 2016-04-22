@@ -6,5 +6,5 @@ interface Constants {
     String PREFERENCES_SKIPPED_VERSION = "skipped_version";
 
     String JSON_MIN_VERSION_CODE = "minVersionCode";
-    String JSON_MIN_VERSION_NAME = "minVersionName";
+    String JSON_MIN_VERSION_NAME = "min_version";
 }

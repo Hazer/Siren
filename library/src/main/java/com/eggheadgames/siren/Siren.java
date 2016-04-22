@@ -110,19 +110,20 @@ public class Siren {
         try {
             JSONObject rootJson = new JSONObject(json);
 
-            if (!rootJson.isNull(getSirenHelper().getPackageName(mApplicationContext))) {
-                JSONObject appJson = rootJson.getJSONObject(getSirenHelper().getPackageName(mApplicationContext));
+//            if (!rootJson.isNull(getSirenHelper().getPackageName(mApplicationContext))) {
+//                JSONObject appJson = rootJson.getJSONObject(getSirenHelper().getPackageName(mApplicationContext));
 
                 //version name have higher priority then version code
-                if (checkVersionName(appJson)) {
+//                if (checkVersionName(appJson)) {
+                if (checkVersionName(rootJson)) {
                     return;
                 }
 
-                checkVersionCode(appJson);
+//                checkVersionCode(appJson);
 
-            } else {
-                throw new JSONException("field not found");
-            }
+//            } else {
+//                throw new JSONException("field not found");
+//            }
 
         } catch (JSONException e) {
             e.printStackTrace();
